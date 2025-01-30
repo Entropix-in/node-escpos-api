@@ -1,10 +1,10 @@
 {
-  "name": "ts-npm-package-boilerplate",
+  "name": "node-escpos-api",
   "version": "0.0.0",
   "type": "module",
   "author": {
-    "name": "Aaron Rackley",
-    "email": "aaron.rackley9@gmail.com"
+    "name": "Rohan Das",
+    "email": "rohan@entropix.in"
   },
   "main": "./dist/my-lib.umd.cjs",
   "module": "./dist/my-lib.js",
@@ -24,7 +24,8 @@
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\"",
-    "clean-up": "npm run lint-and-fix & npm run pretty"
+    "clean-up": "npm run lint-and-fix & npm run pretty",
+    "dev:print": "vite-node example/print.ts"
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.33.0",
@@ -33,6 +34,7 @@
     "semantic-release": "^21.1.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
+    "vite-node": "^3.0.4",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.34.4"
   },
@@ -40,6 +42,8 @@
     "dist"
   ],
   "dependencies": {
+    "@node-escpos/core": "^0.6.0",
+    "@node-escpos/usb-adapter": "^0.3.1",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "eslint-config-prettier": "^9.0.0",
