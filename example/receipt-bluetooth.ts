@@ -1,6 +1,6 @@
-import { ConsoleAdapter, Printer, ReceiptTemplate } from '../src';
+import { BluetoothAdapter, Printer, ReceiptTemplate } from '../src';
 
-const device = new ConsoleAdapter();
+const device = new BluetoothAdapter('66:32:7E:CE:91:A9');
 const printer = new Printer(device);
 const receipt = new ReceiptTemplate();
 
@@ -18,6 +18,11 @@ receipt
     name: 'Loaded Cheese Nachos',
     qty: 1,
     total: 12.0,
+  })
+  .addItem({
+    name: 'Pizza',
+    qty: 3,
+    total: 30.0,
   })
   .addItem({
     name: 'Pizza',

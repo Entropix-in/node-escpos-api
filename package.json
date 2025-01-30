@@ -16,9 +16,9 @@
     }
   },
   "scripts": {
-    "xtest": "vite-node example/test.ts",
     "example:hello": "vite-node example/hello.ts",
-    "example:receipt": "vite-node example/receipt.ts",
+    "example:receipt:usb": "vite-node example/receipt-usb.ts",
+    "example:receipt:blue": "vite-node example/receipt-bluetooth.ts",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",

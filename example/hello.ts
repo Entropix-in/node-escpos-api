@@ -1,6 +1,6 @@
-import { ConsoleAdapter, HelloTemplate, Printer } from '../src';
+import { BluetoothAdapter, HelloTemplate, Printer } from '../src';
 
-const device = new ConsoleAdapter();
+const device = new BluetoothAdapter('66:32:7E:CE:91:A9');
 const printer = new Printer(device);
 const template = new HelloTemplate();
 
