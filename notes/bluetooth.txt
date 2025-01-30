@@ -1,0 +1,4 @@
+Add bluetooth permission:
+
+volta which node
+sudo setcap cap_net_raw+eip /home/entropix/.volta/tools/image/node/20.18.2/bin/node
