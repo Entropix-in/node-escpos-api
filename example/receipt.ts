@@ -1,10 +1,8 @@
-import Console from '../src/adapters/console';
-import Printer from '../src/core';
-import Receipt from '../src/templates/receipt';
+import { ConsoleAdapter, Printer, ReceiptTemplate } from '../src';
 
-const device = new Console();
+const device = new ConsoleAdapter();
 const printer = new Printer(device);
-const receipt = new Receipt();
+const receipt = new ReceiptTemplate();
 
 receipt
   .title('FoodFlow')

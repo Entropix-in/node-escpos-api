@@ -16,6 +16,7 @@
     }
   },
   "scripts": {
+    "example:hello": "vite-node example/hello.ts",
     "example:receipt": "vite-node example/receipt.ts",
     "build": "tsc && vite build",
     "preview": "vite preview",
