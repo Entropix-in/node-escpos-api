@@ -1,8 +1,12 @@
-import ThermalPrinter from '../src/core';
+import Console from '../src/adapters/console';
+import Printer from '../src/core';
+import Receipt from '../src/templates/receipt';
 
-const printer = new ThermalPrinter();
+const device = new Console();
+const printer = new Printer(device);
+const receipt = new Receipt();
 
-printer
+receipt
   .title('FoodFlow')
   .subtitle('Smart restaurant solutions')
   .orderNumber('#789')
@@ -57,5 +61,6 @@ printer
     qty: 1,
     total: 12.0,
   })
-  .total(149.0)
-  .print();
+  .total(149.0);
+
+printer.print(receipt);
