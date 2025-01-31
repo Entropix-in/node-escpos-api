@@ -1,8 +1,7 @@
 import { BluetoothAdapter, Printer, ReceiptTemplate } from '../src';
 
-const smallPrinter = '66:32:7E:CE:91:A9';
-const largePrinter = 'DC:0D:30:64:3D:05';
-const device = new BluetoothAdapter(smallPrinter);
+const address = '66:32:7E:CE:91:A9';
+const device = new BluetoothAdapter(address);
 const printer = new Printer(device);
 const receipt = new ReceiptTemplate();
 
