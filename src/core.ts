@@ -24,6 +24,8 @@ export default class Printer {
         encoding: this.config.encoding,
         width: this.config.width,
       });
+    } else {
+      console.error(err);
     }
   }
 
